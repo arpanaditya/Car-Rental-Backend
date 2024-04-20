@@ -15,10 +15,10 @@ exports.bookCar = async (req, res) => {
     const payment = await stripe.charges.create(
       {
         amount: req.body.totalAmount * 100,
-        currency: "pkr",
+        currency: "inr",
         customer: customer.id,
         receipt_email: token.email,
-        description: "Software development services",
+        description: "Car Renting Services",
       },
       {
         idempotencyKey: uuidv4(),
