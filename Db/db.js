@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-
+mongoose.set("strictQuery", false);
 function connectDb() {
   mongoose.connect(process.env.MONGODB_URI, {
     useUnifiedTopology: true,
