@@ -9,7 +9,7 @@ function connectDb() {
   });
   const connection = mongoose.connection;
   connection.on("connected", () => {
-    console.log("connection successfull");
+    console.log("connection successful");
   });
   connection.on("error", () => {
     console.log("connection failed");
